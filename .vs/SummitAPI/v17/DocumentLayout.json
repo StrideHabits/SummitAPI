@@ -1,0 +1,485 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\render.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\render.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Helpers\\JwtHelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Helpers\\JwtHelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\CompletionDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\DTOs\\CompletionDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\UploadController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Controllers\\UploadController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\NoteDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\DTOs\\NoteDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Models\\Goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\NotesController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Controllers\\NotesController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\GoalsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Controllers\\GoalsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\TagsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Controllers\\TagsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\CompletionsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Controllers\\CompletionsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\HabitsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Controllers\\HabitsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Middleware\\ErrorHandlingMiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Middleware\\ErrorHandlingMiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Data\\AppDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Data\\AppDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\GoalDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\DTOs\\GoalDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\TagDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\DTOs\\TagDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\HabitDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\DTOs\\HabitDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\AuthDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\DTOs\\AuthDtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Models\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Models\\Tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Attachment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Models\\Attachment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Models\\Note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Completion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Models\\Completion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Habit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Models\\Habit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Summit.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Summit.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\WeatherForecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\WeatherForecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\WeatherForecastController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Controllers\\WeatherForecastController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Summit\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Dockerfile",
+              "RelativeDocumentMoniker": "Summit\\Dockerfile",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Dockerfile",
+              "RelativeToolTip": "Summit\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-15T11:39:59.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Summit.http",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Summit.http",
+              "RelativeDocumentMoniker": "Summit\\Summit.http",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Summit.http",
+              "RelativeToolTip": "Summit\\Summit.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-08-15T11:37:19.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "Summit\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\WeatherForecast.cs",
+              "RelativeToolTip": "Summit\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:37:13.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "render.yaml",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\render.yaml",
+              "RelativeDocumentMoniker": "Summit\\render.yaml",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\render.yaml",
+              "RelativeToolTip": "Summit\\render.yaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-08-15T11:28:46.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UploadController.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\UploadController.cs",
+              "RelativeDocumentMoniker": "Summit\\Controllers\\UploadController.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\UploadController.cs",
+              "RelativeToolTip": "Summit\\Controllers\\UploadController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:28:31.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NotesController.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\NotesController.cs",
+              "RelativeDocumentMoniker": "Summit\\Controllers\\NotesController.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\NotesController.cs",
+              "RelativeToolTip": "Summit\\Controllers\\NotesController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:28:20.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GoalsController.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\GoalsController.cs",
+              "RelativeDocumentMoniker": "Summit\\Controllers\\GoalsController.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\GoalsController.cs",
+              "RelativeToolTip": "Summit\\Controllers\\GoalsController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:28:09.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TagsController.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\TagsController.cs",
+              "RelativeDocumentMoniker": "Summit\\Controllers\\TagsController.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\TagsController.cs",
+              "RelativeToolTip": "Summit\\Controllers\\TagsController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:27:46.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CompletionsController.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\CompletionsController.cs",
+              "RelativeDocumentMoniker": "Summit\\Controllers\\CompletionsController.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\CompletionsController.cs",
+              "RelativeToolTip": "Summit\\Controllers\\CompletionsController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:27:35.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Summit\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Summit\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:27:19.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HabitsController.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\HabitsController.cs",
+              "RelativeDocumentMoniker": "Summit\\Controllers\\HabitsController.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\HabitsController.cs",
+              "RelativeToolTip": "Summit\\Controllers\\HabitsController.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAJ8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:27:17.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Summit\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Summit\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:27:05.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ErrorHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Middleware\\ErrorHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "Summit\\Middleware\\ErrorHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Middleware\\ErrorHandlingMiddleware.cs",
+              "RelativeToolTip": "Summit\\Middleware\\ErrorHandlingMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:26:52.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JwtHelper.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Helpers\\JwtHelper.cs",
+              "RelativeDocumentMoniker": "Summit\\Helpers\\JwtHelper.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Helpers\\JwtHelper.cs",
+              "RelativeToolTip": "Summit\\Helpers\\JwtHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:26:41.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Summit\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Summit\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:26:02.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NoteDtos.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\NoteDtos.cs",
+              "RelativeDocumentMoniker": "Summit\\DTOs\\NoteDtos.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\NoteDtos.cs",
+              "RelativeToolTip": "Summit\\DTOs\\NoteDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:25:50.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GoalDtos.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\GoalDtos.cs",
+              "RelativeDocumentMoniker": "Summit\\DTOs\\GoalDtos.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\GoalDtos.cs",
+              "RelativeToolTip": "Summit\\DTOs\\GoalDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:25:40.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TagDtos.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\TagDtos.cs",
+              "RelativeDocumentMoniker": "Summit\\DTOs\\TagDtos.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\TagDtos.cs",
+              "RelativeToolTip": "Summit\\DTOs\\TagDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:25:29.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CompletionDtos.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\CompletionDtos.cs",
+              "RelativeDocumentMoniker": "Summit\\DTOs\\CompletionDtos.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\CompletionDtos.cs",
+              "RelativeToolTip": "Summit\\DTOs\\CompletionDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:25:20.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "HabitDtos.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\HabitDtos.cs",
+              "RelativeDocumentMoniker": "Summit\\DTOs\\HabitDtos.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\HabitDtos.cs",
+              "RelativeToolTip": "Summit\\DTOs\\HabitDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:25:09.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AuthDtos.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\AuthDtos.cs",
+              "RelativeDocumentMoniker": "Summit\\DTOs\\AuthDtos.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\DTOs\\AuthDtos.cs",
+              "RelativeToolTip": "Summit\\DTOs\\AuthDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:24:04.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Attachment.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Attachment.cs",
+              "RelativeDocumentMoniker": "Summit\\Models\\Attachment.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Attachment.cs",
+              "RelativeToolTip": "Summit\\Models\\Attachment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:23:38.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Note.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Note.cs",
+              "RelativeDocumentMoniker": "Summit\\Models\\Note.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Note.cs",
+              "RelativeToolTip": "Summit\\Models\\Note.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:23:27.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Goal.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Goal.cs",
+              "RelativeDocumentMoniker": "Summit\\Models\\Goal.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Goal.cs",
+              "RelativeToolTip": "Summit\\Models\\Goal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:23:18.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Tag.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Tag.cs",
+              "RelativeDocumentMoniker": "Summit\\Models\\Tag.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Tag.cs",
+              "RelativeToolTip": "Summit\\Models\\Tag.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:23:08.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Completion.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Completion.cs",
+              "RelativeDocumentMoniker": "Summit\\Models\\Completion.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Completion.cs",
+              "RelativeToolTip": "Summit\\Models\\Completion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:22:55.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Habit.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Habit.cs",
+              "RelativeDocumentMoniker": "Summit\\Models\\Habit.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\Habit.cs",
+              "RelativeToolTip": "Summit\\Models\\Habit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:22:40.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Summit\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Models\\User.cs",
+              "RelativeToolTip": "Summit\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:22:25.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Program.cs",
+              "RelativeDocumentMoniker": "Summit\\Program.cs",
+              "ToolTip": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Program.cs",
+              "RelativeToolTip": "Summit\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAA8AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T11:16:33.966Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
