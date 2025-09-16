@@ -1,6 +1,0 @@
-@Summit_HostAddress = http://localhost:5106
-
-GET {{Summit_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
