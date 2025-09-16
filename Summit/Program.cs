@@ -46,22 +46,30 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "SummitApi", Version = "v1" });
-    c.CustomSchemaIds(t => t.FullName);                 // avoid name collisions (e.g., Configuration)
-    c.SupportNonNullableReferenceTypes();
+    c.CustomSchemaIds(t => t.FullName);
 
-    var scheme = new OpenApiSecurityScheme
+    var jwtScheme = new OpenApiSecurityScheme
     {
         Name = "Authorization",
+        Description = "JWT Authorization header using the Bearer scheme.",
+        In = ParameterLocation.Header,
         Type = SecuritySchemeType.Http,
         Scheme = "bearer",
         BearerFormat = "JWT",
-        In = ParameterLocation.Header,
-        Description = "JWT Authorization header. Example: Bearer {token}"
+        Reference = new OpenApiReference
+        {
+            Type = ReferenceType.SecurityScheme,
+            Id = "Bearer"           // <-- important
+        }
     };
-    c.AddSecurityDefinition("Bearer", scheme);
+
+    // Register the scheme
+    c.AddSecurityDefinition("Bearer", jwtScheme);
+
+    // Require it globally (so every operation gets the lock and header)
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
-        { scheme, Array.Empty<string>() }
+        { jwtScheme, Array.Empty<string>() }
     });
 });
 

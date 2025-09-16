@@ -333,7 +333,6 @@ C:\Users\deang\OneDrive\Documents\GitHub\SummitAPI\Summit\obj\Debug\net8.0\stati
 C:\Users\deang\OneDrive\Documents\GitHub\SummitAPI\Summit\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\deang\OneDrive\Documents\GitHub\SummitAPI\Summit\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\deang\OneDrive\Documents\GitHub\SummitAPI\Summit\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\deang\OneDrive\Documents\GitHub\SummitAPI\Summit\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\deang\OneDrive\Documents\GitHub\SummitAPI\Summit\obj\Debug\net8.0\SummitApi.csproj.Up2Date
 C:\Users\deang\OneDrive\Documents\GitHub\SummitAPI\Summit\obj\Debug\net8.0\SummitApi.dll
 C:\Users\deang\OneDrive\Documents\GitHub\SummitAPI\Summit\obj\Debug\net8.0\refint\SummitApi.dll
