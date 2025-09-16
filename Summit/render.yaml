@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: summitapi
+    runtime: docker
+    plan: free
+    envVars:
+      - key: Jwt__Issuer
+        value: SummitAPI
+      - key: Jwt__Key
+        value: CHANGE_ME_IN_RENDER_DASHBOARD
+      - key: ConnectionStrings__DefaultConnection
+        value: Data Source=/data/summit.db
+      - key: Storage__Mode
+        value: Local
+      - key: Storage__LocalRoot
+        value: /data/uploads
+      - key: Storage__PublicBasePath
+        value: /uploads
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
