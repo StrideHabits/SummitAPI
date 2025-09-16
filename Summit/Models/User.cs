@@ -1,12 +1,14 @@
-namespace Summit.Models
+using System.ComponentModel.DataAnnotations;
+
+namespace SummitAPI.Models
 {
     public class User
     {
-        public int Id { get; set; }
-        public string Username { get; set; } = string.Empty;
-        public string PasswordHash { get; set; } = string.Empty;
-
-        public List<Habit> Habits { get; set; } = new();
-        public List<Tag> Tags { get; set; } = new();
+        [Key] public Guid Id { get; set; }
+        [MaxLength(128)] public string Name { get; set; } = "";
+        [MaxLength(256)] public string Email { get; set; } = "";
+        [MaxLength(512)] public string PasswordHash { get; set; } = "";
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     }
 }

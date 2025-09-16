@@ -4012,11 +4012,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Summit.csproj",
-      "projectName": "Summit",
-      "projectPath": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Summit.csproj",
+      "projectUniqueName": "C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\SummitApi.csproj",
+      "projectName": "SummitApi",
+      "projectPath": "C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\SummitApi.csproj",
       "packagesPath": "C:\\Users\\deang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\obj\\",
+      "outputPath": "C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,19 +1,16 @@
-namespace Summit.Models
+using System.ComponentModel.DataAnnotations;
+
+namespace SummitAPI.Models
 {
     public class Habit
     {
-        public int Id { get; set; }
-        public int UserId { get; set; }
-
-        public string Title { get; set; } = string.Empty;     // e.g. "Read"
-        public string Frequency { get; set; } = "daily";      // daily/weekly/monthly
+        [Key] public Guid Id { get; set; }
+        public Guid UserId { get; set; }
+        [MaxLength(128)] public string Name { get; set; } = "";
+        public int Frequency { get; set; } = 0;         // completions per week
+        [MaxLength(64)] public string? Tag { get; set; }
+        public string? ImageUrl { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-
-        public int? TagId { get; set; }
-
-        public User User { get; set; } = default!;
-        public Tag? Tag { get; set; }
-        public List<Completion> Completions { get; set; } = new();
-        public Goal? Goal { get; set; }
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     }
 }

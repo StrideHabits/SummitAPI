@@ -1,13 +1,21 @@
 services:
   - type: web
-    name: habit-tracker-api
+    name: summitapi
     runtime: docker
     plan: free
     envVars:
       - key: Jwt__Issuer
-        value: "HabitTrackerAPI"
+        value: SummitAPI
       - key: Jwt__Key
-        value: "CHANGE_ME_IN_RENDER_DASHBOARD"   # set a strong secret in Render later
+        value: CHANGE_ME_IN_RENDER_DASHBOARD
+      - key: ConnectionStrings__DefaultConnection
+        value: Data Source=/data/summit.db
+      - key: Storage__Mode
+        value: Local
+      - key: Storage__LocalRoot
+        value: /data/uploads
+      - key: Storage__PublicBasePath
+        value: /uploads
     disk:
       name: data
       mountPath: /data
