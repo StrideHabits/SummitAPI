@@ -1,12 +1,12 @@
-using System.Security.Claims;
-using Summit.Data;
-using Summit.DTOs;
-using Summit.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using SummitAPI.Data;
+using SummitAPI.Dtos;
+using SummitAPI.Models;
+using System.Security.Claims;
 
-namespace Summit.Controllers
+namespace SummitAPI.Controllers
 {
     [ApiController]
     [Authorize]
@@ -14,146 +14,45 @@ namespace Summit.Controllers
     public class HabitsController : ControllerBase
     {
         private readonly AppDbContext _db;
-        public HabitsController(AppDbContext db) => _db = db;
+        public HabitsController(AppDbContext db) { _db = db; }
 
-        private int CurrentUserId() => int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+        private Guid UserId => Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
 
+        // GET /api/habits
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<HabitResponseDto>>> List([FromQuery] bool includeStats = true)
+        public async Task<ActionResult<IEnumerable<HabitDto>>> GetHabits()
         {
-            var uid = CurrentUserId();
-            var habits = await _db.Habits
-                .Where(h => h.UserId == uid)
-                .Include(h => h.Completions)
+            var items = await _db.Habits
+                .Where(h => h.UserId == UserId)
+                .OrderByDescending(h => h.CreatedAt)
+                .Select(h => new HabitDto(h.Id, h.Name, h.Frequency, h.Tag, h.ImageUrl, h.CreatedAt, h.UpdatedAt))
                 .ToListAsync();
 
-            var result = habits.Select(h =>
-            {
-                int currentStreak = CalcCurrentStreak(h.Completions);
-                int longestStreak = CalcLongestStreak(h.Completions);
-                double completionRate = CalcCompletionRate(h.Completions, h.CreatedAt);
-
-                return new HabitResponseDto(h.Id, h.Title, h.Frequency, h.CreatedAt, h.TagId,
-                    includeStats ? currentStreak : 0,
-                    includeStats ? longestStreak : 0,
-                    includeStats ? completionRate : 0);
-            });
-
-            return Ok(result);
+            return items;
         }
 
-        [HttpGet("{id:int}")]
-        public async Task<ActionResult<HabitResponseDto>> Get(int id)
-        {
-            var uid = CurrentUserId();
-            var h = await _db.Habits.Include(h => h.Completions)
-                .FirstOrDefaultAsync(h => h.Id == id && h.UserId == uid);
-            if (h == null) return NotFound();
-
-            var dto = new HabitResponseDto(
-                h.Id, h.Title, h.Frequency, h.CreatedAt, h.TagId,
-                CalcCurrentStreak(h.Completions),
-                CalcLongestStreak(h.Completions),
-                CalcCompletionRate(h.Completions, h.CreatedAt)
-            );
-            return Ok(dto);
-        }
-
+        // POST /api/habits
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] HabitCreateDto dto)
+        public async Task<ActionResult<HabitDto>> Create([FromBody] HabitCreateDto dto)
         {
-            var uid = CurrentUserId();
-            if (dto.TagId.HasValue &&
-                !await _db.Tags.AnyAsync(t => t.Id == dto.TagId.Value && t.UserId == uid))
-                return BadRequest("Invalid tag.");
+            if (string.IsNullOrWhiteSpace(dto.Name))
+                return BadRequest("Name is required.");
 
-            var h = new Habit
+            var habit = new Habit
             {
-                UserId = uid,
-                Title = dto.Title.Trim(),
-                Frequency = string.IsNullOrWhiteSpace(dto.Frequency) ? "daily" : dto.Frequency.Trim(),
-                TagId = dto.TagId
+                Id = Guid.NewGuid(),
+                UserId = UserId,
+                Name = dto.Name.Trim(),
+                Frequency = Math.Max(0, dto.Frequency),
+                Tag = string.IsNullOrWhiteSpace(dto.Tag) ? null : dto.Tag.Trim(),
+                ImageUrl = dto.ImageUrl
             };
-            _db.Habits.Add(h);
+
+            _db.Habits.Add(habit);
             await _db.SaveChangesAsync();
-            return CreatedAtAction(nameof(Get), new { id = h.Id }, new { h.Id });
-        }
 
-        [HttpPut("{id:int}")]
-        public async Task<IActionResult> Update(int id, [FromBody] HabitUpdateDto dto)
-        {
-            var uid = CurrentUserId();
-            var h = await _db.Habits.FirstOrDefaultAsync(x => x.Id == id && x.UserId == uid);
-            if (h == null) return NotFound();
-
-            if (dto.TagId.HasValue &&
-                !await _db.Tags.AnyAsync(t => t.Id == dto.TagId.Value && t.UserId == uid))
-                return BadRequest("Invalid tag.");
-
-            h.Title = dto.Title.Trim();
-            h.Frequency = dto.Frequency.Trim();
-            h.TagId = dto.TagId;
-            await _db.SaveChangesAsync();
-            return NoContent();
-        }
-
-        [HttpDelete("{id:int}")]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var uid = CurrentUserId();
-            var h = await _db.Habits.FirstOrDefaultAsync(x => x.Id == id && x.UserId == uid);
-            if (h == null) return NotFound();
-            _db.Habits.Remove(h);
-            await _db.SaveChangesAsync();
-            return NoContent();
-        }
-
-        [HttpGet("{id:int}/stats")]
-        public async Task<IActionResult> Stats(int id)
-        {
-            var uid = CurrentUserId();
-            var h = await _db.Habits.Include(x => x.Completions)
-                .FirstOrDefaultAsync(x => x.Id == id && x.UserId == uid);
-            if (h == null) return NotFound();
-
-            var stats = new
-            {
-                currentStreak = CalcCurrentStreak(h.Completions),
-                longestStreak = CalcLongestStreak(h.Completions),
-                completionRate = CalcCompletionRate(h.Completions, h.CreatedAt)
-            };
-            return Ok(stats);
-        }
-
-        // --- simple streak helpers
-        private static int CalcCurrentStreak(IEnumerable<Completion> comps)
-        {
-            var days = comps.Select(c => c.CompletedOn.Date).Distinct().ToHashSet();
-            int streak = 0;
-            for (var d = DateTime.UtcNow.Date; days.Contains(d); d = d.AddDays(-1)) streak++;
-            return streak;
-        }
-
-        private static int CalcLongestStreak(IEnumerable<Completion> comps)
-        {
-            var days = comps.Select(c => c.CompletedOn.Date).Distinct().OrderBy(d => d).ToList();
-            int best = 0, cur = 0;
-            DateTime? prev = null;
-            foreach (var d in days)
-            {
-                if (prev.HasValue && d == prev.Value.AddDays(1)) cur++;
-                else cur = 1;
-                best = Math.Max(best, cur);
-                prev = d;
-            }
-            return best;
-        }
-
-        private static double CalcCompletionRate(IEnumerable<Completion> comps, DateTime createdAt)
-        {
-            var totalDays = Math.Max(1, (DateTime.UtcNow.Date - createdAt.Date).Days + 1);
-            var completedDays = comps.Select(c => c.CompletedOn.Date).Distinct().Count();
-            return Math.Round((double)completedDays / totalDays, 3);
+            var result = new HabitDto(habit.Id, habit.Name, habit.Frequency, habit.Tag, habit.ImageUrl, habit.CreatedAt, habit.UpdatedAt);
+            return CreatedAtAction(nameof(GetHabits), new { id = habit.Id }, result);
         }
     }
 }

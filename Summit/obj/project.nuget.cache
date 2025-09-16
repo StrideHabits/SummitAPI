@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Icp5N/+gDSs=",
+  "dgSpecHash": "kgeAfqosBdQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\deang\\source\\repos\\StrideHabits\\SummitAPI\\Summit\\Summit.csproj",
+  "projectFilePath": "C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\SummitAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\deang\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\deang\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
