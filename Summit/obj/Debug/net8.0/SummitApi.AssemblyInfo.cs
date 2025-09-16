@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SummitApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16219d91985d3d0af3c0a4c8b731219925b1e9a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c3cbc6ef89435cb6fc62c64da44f148acf60416")]
 [assembly: System.Reflection.AssemblyProductAttribute("SummitApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SummitApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

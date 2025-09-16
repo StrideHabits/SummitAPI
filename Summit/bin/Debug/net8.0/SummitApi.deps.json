@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "SummitApi/1.0.0": {
+      "SummitAPI/1.0.0": {
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.19",
@@ -15,7 +15,7 @@
           "Swashbuckle.AspNetCore": "6.6.2"
         },
         "runtime": {
-          "SummitApi.dll": {}
+          "SummitAPI.dll": {}
         }
       },
       "BCrypt.Net-Next/4.0.3": {
@@ -962,7 +962,7 @@
     }
   },
   "libraries": {
-    "SummitApi/1.0.0": {
+    "SummitAPI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

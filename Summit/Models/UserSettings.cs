@@ -2,7 +2,7 @@
 
 namespace SummitAPI.Models
 {
-    public class Configuration
+    public class UserSettings
     {
         [Key] public Guid Id { get; set; }
         public Guid UserId { get; set; }

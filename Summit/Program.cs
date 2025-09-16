@@ -2,8 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using SummitAPI.Data;
-using SummitAPI.Service;   // if your files use SummitAPI.Services, change to .Services
+using SummitAPI.Service;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,11 +13,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(o =>
     o.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// --- Services ---
+// --- App services ---
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddHttpClient();
 
-// Resolve these ONCE so names aren't reused later
+// Resolve once (used for DI + later for StaticFiles)
 var localRoot = builder.Configuration["Storage:LocalRoot"] ?? "/data/uploads";
 var publicBase = builder.Configuration["Storage:PublicBasePath"] ?? "/uploads";
 
@@ -40,7 +41,29 @@ else
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+// --- Swagger (robust + JWT button) ---
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "SummitApi", Version = "v1" });
+    c.CustomSchemaIds(t => t.FullName);                 // avoid name collisions (e.g., Configuration)
+    c.SupportNonNullableReferenceTypes();
+
+    var scheme = new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "JWT Authorization header. Example: Bearer {token}"
+    };
+    c.AddSecurityDefinition("Bearer", scheme);
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        { scheme, Array.Empty<string>() }
+    });
+});
 
 // --- CORS for Android dev ---
 builder.Services.AddCors(options =>
@@ -48,15 +71,30 @@ builder.Services.AddCors(options =>
     options.AddPolicy("android", p => p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 });
 
-// --- JWT ---
-var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!);
+// --- JWT (with friendly guard) ---
+var issuer = builder.Configuration["Jwt:Issuer"] ?? "SummitApi";
+var keyString = builder.Configuration["Jwt:Key"];
+if (string.IsNullOrWhiteSpace(keyString))
+{
+    if (builder.Environment.IsDevelopment())
+    {
+        // Dev-only fallback so you can run without secrets; DO NOT use in prod
+        keyString = "DEV_ONLY_FALLBACK_p7N2t5Q8w1E4y7U0r3K6m9Z2x5C8v1B4n7M0q3T6z9L2f5H8";
+    }
+    else
+    {
+        throw new InvalidOperationException("Missing Jwt:Key. Set it in appsettings, user-secrets, or environment.");
+    }
+}
+var key = Encoding.UTF8.GetBytes(keyString);
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(o =>
     {
         o.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
-            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidIssuer = issuer,
             ValidateAudience = false,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
@@ -66,6 +104,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 var app = builder.Build();
 
+// Show detailed errors in Dev (helps when /swagger/v1/swagger.json fails)
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+
 // Ensure DB exists / migrate
 using (var scope = app.Services.CreateScope())
 {
@@ -73,19 +117,32 @@ using (var scope = app.Services.CreateScope())
     try { db.Database.Migrate(); } catch { db.Database.EnsureCreated(); }
 }
 
-// Static files for Local storage (/uploads/* → /data/uploads or your local path)
-Directory.CreateDirectory(localRoot);
+// ---- Static files for Local storage (/uploads/* -> <absolute path>) ----
+var configuredLocalRoot = builder.Configuration["Storage:LocalRoot"] ?? "/data/uploads";
+var configuredPublicBase = builder.Configuration["Storage:PublicBasePath"] ?? "/uploads";
+
+// Normalize to absolute path for PhysicalFileProvider
+string localRootPath = configuredLocalRoot;
+if (!Path.IsPathRooted(localRootPath))
+    localRootPath = Path.GetFullPath(Path.Combine(app.Environment.ContentRootPath, configuredLocalRoot));
+
+var requestPath = configuredPublicBase.StartsWith("/") ? configuredPublicBase : "/" + configuredPublicBase;
+
+Directory.CreateDirectory(localRootPath);
 app.UseStaticFiles(new StaticFileOptions
 {
-    FileProvider = new PhysicalFileProvider(localRoot),
-    RequestPath = publicBase
+    FileProvider = new PhysicalFileProvider(localRootPath),
+    RequestPath = requestPath
 });
 
 app.UseSwagger();
 app.UseSwaggerUI();
+
 app.UseHttpsRedirection();
 app.UseCors("android");
 app.UseAuthentication();
 app.UseAuthorization();
+
 app.MapControllers();
+
 app.Run();

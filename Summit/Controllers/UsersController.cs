@@ -21,7 +21,7 @@ namespace SummitAPI.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterRequest req)
+        public async Task<ActionResult<RegisterResponse>> Register([FromBody] RegisterRequest req)
         {
             if (string.IsNullOrWhiteSpace(req.Email) || string.IsNullOrWhiteSpace(req.Password))
                 return BadRequest("Email and Password required.");
@@ -38,10 +38,10 @@ namespace SummitAPI.Controllers
                 PasswordHash = HashPassword(req.Password)
             };
             _db.Users.Add(user);
-            _db.Configurations.Add(new Configuration { Id = Guid.NewGuid(), UserId = user.Id });
+            _db.Settings.Add(new UserSettings { Id = Guid.NewGuid(), UserId = user.Id });
             await _db.SaveChangesAsync();
 
-            return Ok(new { user.Id, user.Email });
+            return Ok(new RegisterResponse(user.Id, user.Email));
         }
 
         [HttpPost("login")]

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\SummitApi.csproj": {}
+    "C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\SummitAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\SummitApi.csproj": {
+    "C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\SummitAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\SummitApi.csproj",
-        "projectName": "SummitApi",
-        "projectPath": "C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\SummitApi.csproj",
+        "projectUniqueName": "C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\SummitAPI.csproj",
+        "projectName": "SummitAPI",
+        "projectPath": "C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\SummitAPI.csproj",
         "packagesPath": "C:\\Users\\deang\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\obj\\",
         "projectStyle": "PackageReference",

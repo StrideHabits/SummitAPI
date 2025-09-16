@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using SummitAPI.Models;
 
 namespace SummitAPI.Data
@@ -11,7 +10,7 @@ namespace SummitAPI.Data
         public DbSet<User> Users => Set<User>();
         public DbSet<Habit> Habits => Set<Habit>();
         public DbSet<HabitCompletion> HabitCompletions => Set<HabitCompletion>();
-        public DbSet<Configuration> Configurations => Set<Configuration>();
+        public DbSet<UserSettings> Settings => Set<UserSettings>();
 
         protected override void OnModelCreating(ModelBuilder b)
         {
@@ -34,7 +33,7 @@ namespace SummitAPI.Data
                 .HasForeignKey(c => c.HabitId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            b.Entity<Configuration>()
+            b.Entity<UserSettings>()
                 .HasOne<User>()
                 .WithMany()
                 .HasForeignKey(c => c.UserId)

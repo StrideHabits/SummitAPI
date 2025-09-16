@@ -20,11 +20,11 @@ namespace SummitAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<SettingsDto>> Get()
         {
-            var cfg = await _db.Configurations.FirstOrDefaultAsync(c => c.UserId == UserId);
+            var cfg = await _db.Settings.FirstOrDefaultAsync(c => c.UserId == UserId);
             if (cfg is null)
             {
-                cfg = new Configuration { Id = Guid.NewGuid(), UserId = UserId };
-                _db.Configurations.Add(cfg);
+                cfg = new UserSettings { Id = Guid.NewGuid(), UserId = UserId };
+                _db.Settings.Add(cfg);
                 await _db.SaveChangesAsync();
             }
             return new SettingsDto(cfg.Theme, cfg.Notifications);
@@ -33,12 +33,12 @@ namespace SummitAPI.Controllers
         [HttpPut]
         public async Task<ActionResult<SettingsDto>> Update([FromBody] SettingsDto dto)
         {
-            var cfg = await _db.Configurations.FirstOrDefaultAsync(c => c.UserId == UserId)
-                      ?? new Configuration { Id = Guid.NewGuid(), UserId = UserId };
+            var cfg = await _db.Settings.FirstOrDefaultAsync(c => c.UserId == UserId)
+                      ?? new UserSettings { Id = Guid.NewGuid(), UserId = UserId };
             cfg.Theme = string.IsNullOrWhiteSpace(dto.Theme) ? "light" : dto.Theme;
             cfg.Notifications = dto.Notifications;
             cfg.UpdatedAt = DateTime.UtcNow;
-            _db.Configurations.Update(cfg);
+            _db.Settings.Update(cfg);
             await _db.SaveChangesAsync();
             return new SettingsDto(cfg.Theme, cfg.Notifications);
         }
