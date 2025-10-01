@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\Migrations\\20250916094030_Rename_Configuration_To_UserSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250916094030_Rename_Configuration_To_UserSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitAPI.csproj|c:\\users\\deang\\onedrive\\documents\\github\\summitapi\\summit\\migrations\\20250916094030_rename_configuration_to_usersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitAPI.csproj|solutionrelative:migrations\\20250916094030_rename_configuration_to_usersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitApi.csproj|c:\\users\\deang\\onedrive\\documents\\github\\summitapi\\summit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitAPI.csproj|c:\\users\\deang\\onedrive\\documents\\github\\summitapi\\summit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitApi.csproj|c:\\users\\deang\\onedrive\\documents\\github\\summitapi\\summit\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitApi.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitAPI.csproj|c:\\users\\deang\\onedrive\\documents\\github\\summitapi\\summit\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitAPI.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitApi.csproj|c:\\users\\deang\\onedrive\\documents\\github\\summitapi\\summit\\controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitApi.csproj|solutionrelative:controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitAPI.csproj|c:\\users\\deang\\onedrive\\documents\\github\\summitapi\\summit\\controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitAPI.csproj|solutionrelative:controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitApi.csproj|c:\\users\\deang\\onedrive\\documents\\github\\summitapi\\summit\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitApi.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitAPI.csproj|c:\\users\\deang\\onedrive\\documents\\github\\summitapi\\summit\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitAPI.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitApi.csproj|c:\\users\\deang\\onedrive\\documents\\github\\summitapi\\summit\\models\\usersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitApi.csproj|solutionrelative:models\\usersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitAPI.csproj|c:\\users\\deang\\onedrive\\documents\\github\\summitapi\\summit\\models\\usersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8D274B7-4BD7-4B99-34FA-4A4BAB0F9904}|SummitAPI.csproj|solutionrelative:models\\usersettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "Migrations\\20250916094030_Rename_Configuration_To_UserSettings.cs",
               "ToolTip": "C:\\Users\\deang\\OneDrive\\Documents\\GitHub\\SummitAPI\\Summit\\Migrations\\20250916094030_Rename_Configuration_To_UserSettings.cs",
               "RelativeToolTip": "Migrations\\20250916094030_Rename_Configuration_To_UserSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAowBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-16T09:40:30.881Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "Controllers\\UsersController.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:39:26.215Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-16T09:39:26.215Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "Controllers\\SettingsController.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:39:11.668Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-16T09:39:11.668Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:39:03.15Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-16T09:39:03.15Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "Models\\UserSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:38:19.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-16T09:38:19.755Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAAwIgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T09:34:22.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-16T09:34:22.127Z"
             }
           ]
         }
