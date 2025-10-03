@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SummitAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be5010563565f51b0a2bb8fd3c535522b53e08f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d5489446e40c5d1d9d4738825e287591d5acd28")]
 [assembly: System.Reflection.AssemblyProductAttribute("SummitAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SummitAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

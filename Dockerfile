@@ -3,13 +3,13 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # copy csproj and restore as distinct layers
-COPY Summit/SummitApi.csproj Summit/
-RUN dotnet restore Summit/SummitApi.csproj
+COPY Summit/SummitAPI.csproj Summit/
+RUN dotnet restore Summit/SummitAPI.csproj
 
 # copy everything else and build
 COPY . .
 WORKDIR /src/Summit
-RUN dotnet publish SummitApi.csproj -c Release -o /app/out
+RUN dotnet publish SummitAPI.csproj -c Release -o /app/out
 
 # Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
