@@ -27,7 +27,7 @@ namespace SummitAPI.Service
                 audience: null,
                 claims: claims,
                 notBefore: DateTime.UtcNow,
-                expires: DateTime.UtcNow.AddHours(12),
+                expires: DateTime.UtcNow.AddHours(24),
                 signingCredentials: creds
             );
             return new JwtSecurityTokenHandler().WriteToken(token);
