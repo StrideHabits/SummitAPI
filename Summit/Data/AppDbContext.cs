@@ -30,12 +30,14 @@ namespace SummitAPI.Data
             b.Entity<Habit>()
                 .Property(x => x.RowVersion)
                 .IsConcurrencyToken()
-                .ValueGeneratedOnAddOrUpdate();
+                .ValueGeneratedOnAddOrUpdate()
+                .HasDefaultValueSql("randomblob(16)");
 
             b.Entity<HabitCompletion>()
                 .Property(x => x.RowVersion)
                 .IsConcurrencyToken()
-                .ValueGeneratedOnAddOrUpdate();
+                .ValueGeneratedOnAddOrUpdate()
+                .HasDefaultValueSql("randomblob(16)");
 
             // HabitCompletions
             b.Entity<HabitCompletion>()
@@ -93,6 +95,10 @@ namespace SummitAPI.Data
                 {
                     if (e.Metadata.FindProperty("UpdatedAt") != null)
                         e.CurrentValues["UpdatedAt"] = now;
+
+                    // Manually bump concurrency token for SQLite
+                    if (e.Metadata.FindProperty("RowVersion") != null)
+                        e.CurrentValues["RowVersion"] = Guid.NewGuid().ToByteArray();
                 }
             }
         }
