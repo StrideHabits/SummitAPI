@@ -1,0 +1,42 @@
+# IDE (VS/Rider/VSCode)
+.vs/
+.idea/
+.vscode/
+*.suo
+*.user
+*.rsuser
+
+# Build outputs
+[Bb]in/
+[Oo]bj/
+*.dll
+*.exe
+*.pdb
+
+# Publish artifacts
+out/
+publish/
+app/out/
+
+# ASP.NET temp
+*.cache
+*.log
+
+# SQLite runtime files
+*.db
+*.db-shm
+*.db-wal
+
+# Packages
+packages/
+*.nupkg
+*.snupkg
+
+# Config overrides / secrets (keep safe template committed)
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# Node/Frontend stragglers (if any)
+node_modules/
+dist/
