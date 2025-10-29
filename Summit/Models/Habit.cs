@@ -10,7 +10,12 @@ namespace SummitAPI.Models
         public int Frequency { get; set; } = 0;         // completions per week
         [MaxLength(64)] public string? Tag { get; set; }
         public string? ImageUrl { get; set; }
+
+        public bool Deleted { get; set; } = false; // sync update
+         
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+        [Timestamp] public byte[] RowVersion { get; set; } = Array.Empty<byte>(); // sync update
     }
 }
