@@ -55,3 +55,14 @@ Without these, login & auth endpoints will fail.
 SQLite DB connected: <img width="698" alt="sqlite" src="https://github.com/user-attachments/assets/3eca1987-372e-400b-a781-fbf99b5d1fd7" />
 
 Swagger UI working: <img width="1416" alt="swagger" src="https://github.com/user-attachments/assets/e7696153-daf8-418b-a70a-75bac131bf0e" />
+
+## 👥 Contributors
+
+A big thank you to everyone who contributed to Stride — your efforts are truly appreciated!
+
+| Nanme               | Student Number                       |
+| ------------------- | ------------------------------------ |
+| **Musa Ntuli**      | ST1029336                            |
+| **Dean Gibson**     | ST10326084                           |
+| **Fortune Mabona**  | ST10187287                           |
+| **Matthew Pieterse**| ST10257002                           |
