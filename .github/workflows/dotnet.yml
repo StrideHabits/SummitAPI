@@ -20,12 +20,12 @@ jobs:
 
       - name: Restore dependencies
         working-directory: Summit
-        run: dotnet restore
+        run: dotnet restore Summit.sln
 
       - name: Build
         working-directory: Summit
-        run: dotnet build --no-restore
+        run: dotnet build Summit.sln --no-restore --configuration Release
 
       - name: Test
         working-directory: Summit
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test Summit.sln --no-build --verbosity normal
