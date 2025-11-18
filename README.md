@@ -121,6 +121,11 @@ Notes:
 
 ## 📸 Screenshots
 
+
+GITHUB ACTIONS
+
+<img width="1026" height="512" alt="image" src="https://github.com/user-attachments/assets/67ca5eb8-fb71-4271-86c6-c4615fd63627" />
+
 SQLite DB connected:
 
 <img width="698" alt="sqlite" src="https://github.com/user-attachments/assets/3eca1987-372e-400b-a781-fbf99b5d1fd7" />
