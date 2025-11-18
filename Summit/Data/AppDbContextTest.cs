@@ -13,8 +13,9 @@ namespace SummitAPI.Tests.Data
         {
             Console.WriteLine("Running AppDbContext Tests...\n");
 
+            using var context = CreateTestContext();
+
             // Test 1: DbContext can be created
-            var context = CreateInMemoryContext();
             Console.WriteLine("✓ DbContext created successfully");
 
             // Test 2: DbSets are accessible
@@ -33,10 +34,9 @@ namespace SummitAPI.Tests.Data
             // Test duplicate email (should fail)
             try
             {
-                var context2 = CreateInMemoryContext();
-                var user2 = new User { Name = "Jane", Email = "john@test.com", PasswordHash = "hash2" };
-                context2.Users.Add(user2);
-                await context2.SaveChangesAsync();
+                var duplicateUser = new User { Name = "Jane", Email = "john@test.com", PasswordHash = "hash2" };
+                context.Users.Add(duplicateUser);
+                await context.SaveChangesAsync();
                 Console.WriteLine("✗ Duplicate email should have failed");
             }
             catch
@@ -63,7 +63,7 @@ namespace SummitAPI.Tests.Data
 
             // Test 6: UpdatedAt changes on modification
             var beforeUpdate = savedHabit.UpdatedAt;
-            await Task.Delay(100); // Small delay to ensure timestamp difference
+            await Task.Delay(100); // Ensure timestamp difference
             savedHabit.Name = "Evening Run";
             await context.SaveChangesAsync();
 
@@ -72,9 +72,9 @@ namespace SummitAPI.Tests.Data
             Console.WriteLine($"  Before: {beforeUpdate:HH:mm:ss.fff}");
             Console.WriteLine($"  After:  {updatedHabit.UpdatedAt:HH:mm:ss.fff}");
 
-            // Test 7: RowVersion is set automatically
-            Console.WriteLine($"\n✓ RowVersion is set: {savedHabit.RowVersion.Length > 0}");
-            Console.WriteLine($"  RowVersion length: {savedHabit.RowVersion.Length} bytes");
+            // Test 7: RowVersion is set automatically (optimistic concurrency)
+            Console.WriteLine($"\n✓ RowVersion is set: {savedHabit.RowVersion != null && savedHabit.RowVersion.Length > 0}");
+            Console.WriteLine($"  RowVersion length: {savedHabit.RowVersion?.Length ?? 0} bytes");
 
             // Test 8: HabitCompletion with unique HabitId + DayKey
             var completion1 = new HabitCompletion
@@ -86,17 +86,16 @@ namespace SummitAPI.Tests.Data
             await context.SaveChangesAsync();
             Console.WriteLine($"\n✓ HabitCompletion saved: {completion1.Id != Guid.Empty}");
 
-            // Test duplicate HabitId + DayKey (should fail)
+            // Duplicate HabitId + DayKey (should fail)
             try
             {
-                var context3 = CreateInMemoryContext();
                 var completion2 = new HabitCompletion
                 {
                     HabitId = habit1.Id,
                     DayKey = "2024-11-15"
                 };
-                context3.HabitCompletions.Add(completion2);
-                await context3.SaveChangesAsync();
+                context.HabitCompletions.Add(completion2);
+                await context.SaveChangesAsync();
                 Console.WriteLine("✗ Duplicate HabitId+DayKey should have failed");
             }
             catch
@@ -105,24 +104,24 @@ namespace SummitAPI.Tests.Data
             }
 
             // Test 9: Cascade delete - deleting user deletes habits
-            var user2 = new User { Name = "Alice", Email = "alice@test.com", PasswordHash = "hash" };
-            context.Users.Add(user2);
+            var cascadeUser = new User { Name = "Alice", Email = "alice@test.com", PasswordHash = "hash" };
+            context.Users.Add(cascadeUser);
             await context.SaveChangesAsync();
 
-            var habit2 = new Habit { UserId = user2.Id, Name = "Reading", Frequency = 7 };
+            var habit2 = new Habit { UserId = cascadeUser.Id, Name = "Reading", Frequency = 7 };
             context.Habits.Add(habit2);
             await context.SaveChangesAsync();
 
-            var habitCount = await context.Habits.CountAsync(h => h.UserId == user2.Id);
+            var habitCount = await context.Habits.CountAsync(h => h.UserId == cascadeUser.Id);
             Console.WriteLine($"\n✓ User has habits: {habitCount == 1}");
 
-            context.Users.Remove(user2);
+            context.Users.Remove(cascadeUser);
             await context.SaveChangesAsync();
 
-            var habitCountAfter = await context.Habits.CountAsync(h => h.UserId == user2.Id);
+            var habitCountAfter = await context.Habits.CountAsync(h => h.UserId == cascadeUser.Id);
             Console.WriteLine($"✓ Cascade delete works: {habitCountAfter == 0}");
             Console.WriteLine($"  Habits before delete: {habitCount}");
-            Console.WriteLine($"  Habits after delete: {habitCountAfter}");
+            Console.WriteLine($"  Habits after delete:  {habitCountAfter}");
 
             // Test 10: Cascade delete - deleting habit deletes completions
             var user3 = new User { Name = "Bob", Email = "bob@test.com", PasswordHash = "hash" };
@@ -147,7 +146,7 @@ namespace SummitAPI.Tests.Data
             var compCountAfter = await context.HabitCompletions.CountAsync(c => c.HabitId == habit3.Id);
             Console.WriteLine($"✓ Cascade delete for completions works: {compCountAfter == 0}");
             Console.WriteLine($"  Completions before: {compCount}");
-            Console.WriteLine($"  Completions after: {compCountAfter}");
+            Console.WriteLine($"  Completions after:  {compCountAfter}");
 
             // Test 11: Multiple completions for same habit, different days
             var user4 = new User { Name = "Charlie", Email = "charlie@test.com", PasswordHash = "hash" };
@@ -191,25 +190,22 @@ namespace SummitAPI.Tests.Data
             var log1 = new RequestLog
             {
                 UserId = user1.Id,
-                RequestId = "req_123",
-                Response = "success"
+                RequestId = "req_123"
+                // Other properties can remain default; we only care about the unique key
             };
             context.RequestLogs.Add(log1);
             await context.SaveChangesAsync();
             Console.WriteLine($"\n✓ RequestLog saved: {log1.Id != Guid.Empty}");
 
-            // Test duplicate UserId + RequestId (should fail)
             try
             {
-                var context4 = CreateInMemoryContext();
                 var log2 = new RequestLog
                 {
                     UserId = user1.Id,
-                    RequestId = "req_123",
-                    Response = "duplicate"
+                    RequestId = "req_123"
                 };
-                context4.RequestLogs.Add(log2);
-                await context4.SaveChangesAsync();
+                context.RequestLogs.Add(log2);
+                await context.SaveChangesAsync();
                 Console.WriteLine("✗ Duplicate UserId+RequestId should have failed");
             }
             catch
@@ -217,26 +213,28 @@ namespace SummitAPI.Tests.Data
                 Console.WriteLine("✓ Unique UserId+RequestId constraint enforced");
             }
 
-            // Test 15: Multiple users and habits
+            // Test 15: Simple database statistics
             var totalUsers = await context.Users.CountAsync();
             var totalHabits = await context.Habits.CountAsync();
             var totalCompletions = await context.HabitCompletions.CountAsync();
 
             Console.WriteLine($"\n✓ Database statistics:");
-            Console.WriteLine($"  Total Users: {totalUsers}");
-            Console.WriteLine($"  Total Habits: {totalHabits}");
-            Console.WriteLine($"  Total Completions: {totalCompletions}");
+            Console.WriteLine($"  Total Users:        {totalUsers}");
+            Console.WriteLine($"  Total Habits:       {totalHabits}");
+            Console.WriteLine($"  Total Completions:  {totalCompletions}");
 
-            Console.WriteLine("\n✅ All tests passed!");
+            Console.WriteLine("\n✅ AppDbContext smoke tests completed.");
         }
 
-        private static AppDbContext CreateInMemoryContext()
+        private static AppDbContext CreateTestContext()
         {
+            // Uses the same SQLite provider as the main API, but with an in-memory database.
             var options = new DbContextOptionsBuilder<AppDbContext>()
-                .UseInMemoryDatabase(databaseName: "TestDatabase_" + Guid.NewGuid())
+                .UseSqlite("DataSource=:memory:")
                 .Options;
 
             var context = new AppDbContext(options);
+            context.Database.OpenConnection();
             context.Database.EnsureCreated();
             return context;
         }
